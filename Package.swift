@@ -3,26 +3,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "CloudSyncKit",
-    platforms: [
-        .iOS(.v17),
-        .macOS(.v14),
-        .tvOS(.v17),
-        .watchOS(.v10),
-        .visionOS(.v1),
-    ],
-    products: [
-        .library(
-            name: "CloudSyncKit",
-            targets: ["CloudSyncKit"]
-        ),
-    ],
-    targets: [
-        .target(
-            name: "CloudSyncKit",
-            swiftSettings: [
-                .swiftLanguageMode(.v6),
-            ]
-        ),
-    ]
+  name: "CloudSyncKit",
+  platforms: [
+    .iOS(.v17),
+    .macOS(.v14),
+    .tvOS(.v17),
+    .watchOS(.v10),
+    .visionOS(.v1),
+  ],
+  products: [
+    .library(
+      name: "CloudSyncKit",
+      targets: ["CloudSyncKit"]
+    )
+  ],
+  targets: [
+    .target(
+      name: "CloudSyncKit",
+      swiftSettings: [
+        .swiftLanguageMode(.v6)
+      ]
+    )
+  ],
+  swiftLanguageModes: [.v6]
 )

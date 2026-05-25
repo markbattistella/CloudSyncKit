@@ -25,6 +25,7 @@ It provides:
 
 | Platform   | Minimum |
 |------------|---------|
+| Swift      | 6.0     |
 | iOS        | 17.0    |
 | macOS      | 14.0    |
 | tvOS       | 17.0    |
@@ -144,10 +145,10 @@ Because the view receives a plain `CloudSyncMonitor.Status` value, the parent's 
 
 ## Monitor Status Values
 
-`CloudSyncMonitor.Status` is an equatable enum with four cases:
+`CloudSyncMonitor.Status` is an equatable and sendable enum with four cases:
 
 ```swift
-public enum Status: Equatable {
+public enum Status: Equatable, Sendable {
   case idle
   case syncing(String)   // associated message: "Uploading to iCloud" etc.
   case success

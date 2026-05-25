@@ -31,8 +31,8 @@ import SwiftUI
 /// ```
 public protocol CloudSyncStatusView: View {
 
-    /// Creates a view for the given sync status.
-    ///
-    /// - Parameter status: The current sync status to display.
-    init(status: CloudSyncMonitor.Status)
+  /// Creates a view for the given sync status.
+  ///
+  /// - Parameter status: The current sync status to display.
+  init(status: CloudSyncMonitor.Status)
 }
